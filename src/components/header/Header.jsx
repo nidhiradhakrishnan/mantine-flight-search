@@ -29,11 +29,10 @@ const Header = () => {
         align="center"
         justify="space-between"
         px="md" 
-        py="xs"
-        bg={'black'}
-        px={100}
-        my={20}
+        py="md"
+        bg={'white'}
         mx={100}
+        mt={29}
         style={{
           borderRadius: '23px', 
           
@@ -50,7 +49,6 @@ const Header = () => {
         >
           {navlinks.map((item) => (
             <NavLink
-              fz={20} 
               key={item.key}
               label={item.name}
               href={item.link}

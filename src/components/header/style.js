@@ -18,7 +18,10 @@ const useStyles = createStyles(() => ({
     color: "#002D74",
     textDecoration: 'none',
     whiteSpace:'nowrap',
-    fontSize:'20px',
+  },
+  headerWrapper: {
+    marginTop: '29px', // Adjust header position 20px from the top
+    borderRadius: '23px', 
   },
 }));
 
