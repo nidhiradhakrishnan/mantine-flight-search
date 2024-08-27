@@ -9,7 +9,6 @@ input:{
     borderRadius: '10px',
     height:'57px',
     alignContent:'center'
-
 },
   
 text:{

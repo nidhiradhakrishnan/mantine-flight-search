@@ -351,11 +351,12 @@ const FlightTable = () => {
           </Tabs>
         </Flex>
       </Card>
-      <Flex justify="flex-end" mr={170}>
+      <Flex pb={20} justify="flex-end" mr={170}>
         <Button
           h={65}
           my={-60}
           w={200}
+          
           className={classes.button}
           bg={"#FDB913"}
           fz={20}
