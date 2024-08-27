@@ -1,6 +1,8 @@
 import { createStyles } from "@mantine/core";
 const useStyle = createStyles (()=>({
-
+card:{
+    borderRadius: '23px' ,
+},
  tabRadius:{ 
     borderRadius: '10px' },
 input:{
@@ -9,6 +11,7 @@ input:{
     alignContent:'center'
 
 },
+  
 text:{
     color:'#4D4D4D',
     fontSize:'18px',
@@ -23,6 +26,10 @@ select: {
     '&::placeholder': {
       color: '#4D4D4D',
     },
+},
+button:{
+color:'#002D74',
+borderRadius:'13px',
 },
 
 }));
