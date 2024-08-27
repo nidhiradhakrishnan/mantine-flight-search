@@ -10,7 +10,7 @@ const BackGround = ()=>{
 const {classes}=useStyles();
 
     return(
-        <BackgroundImage src={bg}  width={100} style={{
+        <BackgroundImage src={bg}   style={{
             position: 'absolute'}} >
             <Header />
             <Center><Text fz={62} className={classes.text} c={'#002D74'} fw={700}>Explore the World:<br /> Book Your Next Flight with Us</Text></Center>

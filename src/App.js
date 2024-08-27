@@ -1,6 +1,6 @@
 import { MantineProvider } from '@mantine/core';
 import BackGround from './components/background/BackGround';
-import FlightTable from './components/flightTable/FlightTable';
+import Header from './components/header/Header';
 
 
 
@@ -8,6 +8,7 @@ function App() {
   return (
     <MantineProvider>
       <BackGround/>
+      {/* <Header/> */}
        </MantineProvider>  
   );
 }
