@@ -58,14 +58,12 @@ const FlightTable = () => {
                 placeholder="Select Class"
                 classNames={{ input: classes.select }}
                 data={[]}
-                // w="100%"
               />
               <Select
               w={{ base: "100%", sm: "auto" }} 
                 classNames={{ input: classes.select }}
                 placeholder="2 Adults 1 Child 1 Infant"
                 data={[]}
-                // w="100%"
               />
             </Flex>
 
