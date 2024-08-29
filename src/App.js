@@ -12,12 +12,12 @@ function App() {
   return (
     <MantineProvider>
 
-        <BackGround /> 
+      <BackGround />
       <RecentSearch />
       <FlightDeals />
-      <Services/>  
-      <PopularDestinations/>  
-      <Faq/>
+      <Services />
+      <PopularDestinations />
+      <Faq />
 
     </MantineProvider>
   );
