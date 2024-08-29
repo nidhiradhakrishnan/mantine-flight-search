@@ -10,10 +10,10 @@ function App() {
   return (
     <MantineProvider>
 
-       {/* <BackGround /> */}
+        <BackGround /> 
       <RecentSearch />
-      {/* <FlightDeals />
-      <Services/> */}
+      <FlightDeals />
+      <Services/>  
 
     </MantineProvider>
   );
