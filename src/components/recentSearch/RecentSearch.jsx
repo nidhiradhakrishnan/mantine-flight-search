@@ -5,7 +5,6 @@ import useStyle from "./style";
 const RecentSearch = () => {
   const { classes } = useStyle();
 
-  // State with key-value pairs
   const [recentSearches, setRecentSearches] = useState([
     { id: 1, label: "Lorem ipsum " },
     { id: 2, label: "Lorem ipsum " },
