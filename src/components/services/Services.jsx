@@ -12,20 +12,20 @@ const Services = () => {
   const { classes } = useStyle();
 
   return (
-    <Container my={100} mx={{ base: 20, sm: 50, md: 80, lg: 100 }} fluid>
-      <Flex direction={{ base: "column", lg: "row" }} gap={80}>
+    <Container my={100} mx={{ base: 20, sm: 30, md: 50, lg: 80 }}  fluid>
+      <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 30, lg: 80 }}>
+        {/* Left Column */}
         <Flex direction={"column"} mb={{ base: 30, lg: 0 }}>
           <Text
             c={"#0B0A12"}
-            fz={{ base: 32, sm: 36, md: 40, lg: 45 }}
+            fz={{ base: 24, sm: 28, md: 32, lg: 36 }}
             fw={700}
-            w={455}
+            w={{ base: "100%", sm: "90%", md: 455 }}
           >
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           </Text>
-          <Text c={"#747579"} w={355} fz={{ base: 18, sm: 20, lg: 22 }} mt={20}>
-            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor
-            dolore magna aliqua
+          <Text c={"#747579"} w={{ base: "100%", sm: "90%", md: 355 }} fz={{ base: 16, sm: 18, md: 20 }} mt={20}>
+            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor dolore magna aliqua
           </Text>
           <Image
             my={20}
@@ -35,36 +35,41 @@ const Services = () => {
             radius={20}
           />
         </Flex>
+
+        {/* Right Column */}
         <Flex direction={"column"} mx={{ base: 0, lg: 20 }}>
           <div style={{ position: "relative" }}>
             <Image
               src={man}
-              width={{ base: "100%", sm: 700, lg: 830 }}
+              width={{ base: "100%", sm: 600, md: 700, lg: 830 }}
               height="auto"
               radius={19}
             />
-            <div style={{ position: "absolute" }}>
+            <div style={{ position: "absolute", top: "50%"}}>
               <Image
                 src={arrowCurley}
+                my={-140}
+                mx={-130}
                 width={196}
-                my={-380}
-                mx={-150}
                 height={91}
+               
+                style={{ position: "absolute", top: "10%" }}
               />
               <Text
-                my={500}
-                mx={-50}
                 px={20}
                 py={20}
                 bg={"white"}
+                my={120}
+                mx={-50}
                 c={"#4D4D4D"}
-                fz={20}
+                fz={{ base: 18, sm:'none', md: 22 }}
                 align="center"
                 className={classes.box}
+                style={{ position: "relative"}}
               >
                 <span
                   style={{
-                    fontSize: "47px",
+                    fontSize: "32px",
                     fontWeight: "bolder",
                     color: "#002D74",
                   }}
@@ -76,34 +81,34 @@ const Services = () => {
               </Text>
             </div>
           </div>
+
+          {/* Service Features */}
           <Flex
             direction={{ base: "column", sm: "row" }}
             align="center"
-            my={{ base: 30, sm: 50 }}
-            gap={{ base: 30, sm: 20, md: 30 }}
+            my={{ base: 20, sm: 30 }}
+            gap={{ base: 20, sm: 30, md: 40 }}
           >
-            <Flex align="center">
+            <Flex align="center" gap={{ base: 15, sm: 20 }}>
               <Image src={bestRateGuarantee} width={61} height={61} />
               <Flex direction={"column"} mx={20}>
-                <Text fz={{ base: 24, sm: 28 }} fw={700}>
+                <Text fz={{ base: 20, sm: 24 }} fw={700}>
                   Best Rate Guarantee
                 </Text>
-                <Text c={"#747579"} fz={{ base: 16, sm: 19 }}>
-                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-                  tempor dolore magna aliqua
+                <Text c={"#747579"} fz={{ base: 14, sm: 16, md: 18 }}>
+                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor dolore magna aliqua
                 </Text>
               </Flex>
             </Flex>
 
-            <Flex align="center" mt={{ base: 30, sm: 0 }}>
+            <Flex align="center" gap={{ base: 15, sm: 20 }} mt={{ base: 20, sm: 0 }}>
               <Image src={noBookingFee} width={61} height={69} />
               <Flex direction={"column"} mx={20}>
-                <Text fz={{ base: 24, sm: 28 }} fw={700}>
+                <Text fz={{ base: 20, sm: 24 }} fw={700}>
                   No Booking Fee
                 </Text>
-                <Text c={"#747579"} fz={{ base: 16, sm: 19 }}>
-                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-                  tempor dolore magna aliqua
+                <Text c={"#747579"} fz={{ base: 14, sm: 16, md: 18 }}>
+                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor dolore magna aliqua
                 </Text>
               </Flex>
             </Flex>
@@ -112,30 +117,28 @@ const Services = () => {
           <Flex
             direction={{ base: "column", sm: "row" }}
             align="center"
-            gap={{ base: 30, sm: 20, md: 30 }}
+            gap={{ base: 20, sm: 30, md: 40 }}
           >
-            <Flex align="center">
+            <Flex align="center" gap={{ base: 15, sm: 20 }}>
               <Image src={securityPayment} width={63} height={55} />
               <Flex direction={"column"} mx={20}>
-                <Text fz={{ base: 24, sm: 28 }} fw={700}>
+                <Text fz={{ base: 20, sm: 24 }} fw={700}>
                   Security Payment
                 </Text>
-                <Text c={"#747579"} fz={{ base: 16, sm: 19 }}>
-                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-                  tempor dolore magna aliqua
+                <Text c={"#747579"} fz={{ base: 14, sm: 16, md: 18 }}>
+                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor dolore magna aliqua
                 </Text>
               </Flex>
             </Flex>
 
-            <Flex align="center" mt={{ base: 30, sm: 0 }}>
+            <Flex align="center" gap={{ base: 15, sm: 20 }} mt={{ base: 20, sm: 0 }}>
               <Image src={moneyGuarantee} width={63} height={73} />
               <Flex direction={"column"} mx={20}>
-                <Text fz={{ base: 24, sm: 28 }} fw={700}>
+                <Text fz={{ base: 20, sm: 24 }} fw={700}>
                   Money Back Guarantee
                 </Text>
-                <Text c={"#747579"} fz={{ base: 16, sm: 19 }}>
-                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-                  tempor dolore magna aliqua
+                <Text c={"#747579"} fz={{ base: 14, sm: 16, md: 18 }}>
+                  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor dolore magna aliqua
                 </Text>
               </Flex>
             </Flex>

@@ -31,7 +31,7 @@ const RecentSearch = () => {
   };
 
   return (
-    <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }} my={50} fluid>
+    <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }}  my={50} fluid>
       <Flex
         direction={{ base: "column", sm: "row" }} 
         gap={{ base: 20, sm: 30 }} 

@@ -8,77 +8,77 @@ import googlePlay from "../Images/googlePlay.jpg";
 const Help = () => {
   const { classes } = useStyle();
   return (
-    <Container bg={"#F5F5F6"} fluid py={60}>
-      <Container
-        mx={{ lg: 100, md: 50, sm: 20, xs: 10 }}
-        fluid
-      >
+    <Container fluid py={60} style={{ backgroundColor: "#F5F5F6" }}>
+      <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }} fluid>
         <Flex
+          direction={{ base: "column", md: "row" }} // Column on base screens, row on md and up
           gap={50}
-          direction={{ base: "column", sm: "row" }} 
-          align={"center"} 
+          align="center"
+          wrap="wrap" // Ensures wrapping on smaller screens
         >
           <Flex
-            bg={"#FFFFFF"}
+            bg="#FFFFFF"
             py={30}
             px={50}
-            direction={{ base: "column", sm: "row" }} 
+            direction={{ base: "column", sm: "row" }} // Column on base screens, row on small and up
             align={{ base: "center", sm: "flex-start" }}
             className={classes.border}
-            style={{ textAlign: "center" }} 
+            style={{ textAlign: "center" }}
           >
             <Image src={HelpImg} width={53} />
             <Flex
-              direction={"column"}
-              mx={{ base: 0, sm: 10 }} 
-              mt={{ base: 20, sm: 0 }} 
+              direction="column"
+              mx={{ base: 0, sm: 10 }}
+              mt={{ base: 20, sm: 0 }}
+              align="center" // Center text on small screens
             >
-              <Text fz={24} fw={700}>
+              <Text fz={{ base: 18, sm: 24 }} fw={700}>
                 24x7 Help
               </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, con <br /> sectetur adipiscing elit,
-                sed do
+              <Text fz={{ base: 14, sm: 16 }}>
+                Lorem ipsum dolor sit amet, con <br /> sectetur adipiscing elit, sed do
               </Text>
             </Flex>
           </Flex>
+
           <Flex
-            bg={"#FFFFFF"}
+            bg="#FFFFFF"
             py={30}
             px={50}
-            direction={{ base: "column", sm: "row" }}
+            direction={{ base: "column", sm: "row" }} // Column on base screens, row on small and up
             align={{ base: "center", sm: "flex-start" }}
             className={classes.border}
             style={{ textAlign: "center" }}
           >
             <Image src={PaymentTrust} width={53} />
             <Flex
-              direction={"column"}
+              direction="column"
               mx={{ base: 0, sm: 10 }}
               mt={{ base: 20, sm: 0 }}
+              align="center" // Center text on small screens
             >
-              <Text fz={24} fw={700}>
+              <Text fz={{ base: 18, sm: 24 }} fw={700}>
                 Payment Trust
               </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, con <br /> sectetur adipiscing elit,
-                sed do
+              <Text fz={{ base: 14, sm: 16 }}>
+                Lorem ipsum dolor sit amet, con <br /> sectetur adipiscing elit, sed do
               </Text>
             </Flex>
           </Flex>
+
           <Flex
-            direction={"column"}
+            direction="column"
+            align="center"
             gap={20}
-            align={{ base: "center", sm: "flex-start" }} // Centers items on small screens
             style={{ textAlign: "center" }}
           >
-            <Text fz={24} fw={700}>
+            <Text fz={{ base: 18, sm: 24 }} fw={700}>
               Download App
             </Text>
             <Flex
+              direction={{ base: "column", sm: "row" }} // Column on base screens, row on small and up
               gap={10}
-              direction={{ base: "column", sm: "row" }} // Stacks buttons vertically on small screens
-              align={"center"} // Centers the buttons
+              align="center"
             >
               <Image src={appStore} width={164} height={51} />
               <Image src={googlePlay} width={164} height={51} />
