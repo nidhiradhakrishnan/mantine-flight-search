@@ -17,6 +17,7 @@ const FlightDeals = () => {
   return (
     <>
       <Text
+      
         fz={47}
         fw={700}
         my={50}

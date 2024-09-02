@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   NavLink,
   Button,
   Image,
   Container,
   Flex,
+  Drawer,
+  Burger,
+  MediaQuery,
+  Card,
 } from "@mantine/core";
-import { useHover } from '@mantine/hooks';
-import headerImage from "../Images/headerImage.png"; 
+import headerImage from "../Images/headerImage.png";
 import useStyles from "./style";
+import { useMediaQuery } from "@mantine/hooks";
 
 const Header = () => {
   const { classes } = useStyles();
-  const { hovered, ref } = useHover();
+  const [opened, setOpened] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 768px)"); // Adjust the size as needed
 
   const navlinks = [
     { key: 1, name: "Home", link: "/" },
@@ -23,43 +28,90 @@ const Header = () => {
   ];
 
   return (
-    <Container fluid px={0}> 
-      <Flex
-        direction="row"
-        align="center"
-        justify="space-between"
-        px="md" 
-        py="md"
-        bg={'white'}
-        mx={100}
-        mt={29}
-        style={{
-          borderRadius: '23px', 
-          
-        }}
-      >
-        <Image src={headerImage} alt="Logo" width={193} mx={100} height={64} />
+    <>
+         <Card
+            bg="white"
+          radius={23}
+ 
         
-        <Flex
-         mx={100}
-          direction="row"
-          align="center"
-          gap="md"
-          
         >
-          {navlinks.map((item) => (
-            <NavLink
-              key={item.key}
-              label={item.name}
-              href={item.link}
-              className={classes.navLink}
-            />
-          ))}
-          <Button fz={20} h={47} w={189} className={classes.agentPortal}>Agent Portal</Button>
-          <Button fz={20} h={47} w={189}  className={classes.login}>Login</Button>
-        </Flex>
-      </Flex>
-    </Container>
+          <Flex justify={'space-around'} >
+            <Image src={headerImage} alt="Logo" width={193} height={64} />
+
+            <MediaQuery largerThan="md"  >
+              <Burger
+                opened={opened}
+                onClick={() => setOpened((o) => !o)}
+                className={classes.burger}
+              />
+            </MediaQuery>
+
+            <MediaQuery smallerThan="md"  >
+              <Flex
+                direction="row"
+                align="center"
+                gap="md"
+                className={classes.navDesktop}
+              >
+                {navlinks.map((item) => (
+                  <NavLink
+                    key={item.key}
+                    label={item.name}
+                    href={item.link}
+                    className={classes.navLink}
+                  />
+                ))}
+                <Button fz={20} h={47} w={189} className={classes.agentPortal}>
+                  Agent Portal
+                </Button>
+                <Button fz={20} h={47} w={189} className={classes.login}>
+                  Login
+                </Button>
+              </Flex>
+            </MediaQuery>
+
+            <Drawer
+              opened={opened}
+              onClose={() => setOpened(false)}
+              padding="md"
+              size="md"
+              className={classes.drawer}
+            >
+              <Flex direction="column" gap="md">
+                {navlinks.map((item) => (
+                  <NavLink
+                    key={item.key}
+                    label={item.name}
+                    href={item.link}
+                    className={classes.drawerNavLink}
+                  />
+                ))}
+
+                {isSmallScreen && (
+                  <>
+                    <Button
+                      fz={20}
+                      h={47}
+                      w="100%"
+                      className={classes.drawerButton}
+                    >
+                      Agent Portal
+                    </Button>
+                    <Button
+                      fz={20}
+                      h={47}
+                      w="100%"
+                      className={classes.drawerButton}
+                    >
+                      Login
+                    </Button>
+                  </>
+                )}
+              </Flex>
+            </Drawer>
+          </Flex>
+        </Card>
+     </>
   );
 };
 

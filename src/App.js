@@ -10,18 +10,19 @@ import FooterPage from './components/footer/FooterPage';
 
 
 
+
 function App() {
   return (
     <MantineProvider>
 
-       <BackGround />
+      <BackGround />
       <RecentSearch />
       <FlightDeals />
       <Services />
       <PopularDestinations />
       <Faq />
-      <Help /> 
-      <FooterPage/>
+      <Help />
+      <FooterPage />
     </MantineProvider>
   );
 }

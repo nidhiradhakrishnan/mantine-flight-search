@@ -5,7 +5,6 @@ import {
   ScrollArea,
   Box,
   Container,
-  Badge,
 } from "@mantine/core";
 import useStyle from "./style";
 import dubai from "../Images/dubai.png";
@@ -13,18 +12,20 @@ import abudhabi from "../Images/abudhabi.png";
 import sharjah from "../Images/sharjah.png";
 import riyad from "../Images/riyad.png";
 import { IconStarFilled } from "@tabler/icons-react";
+
 const PopularDestinations = () => {
   const { classes } = useStyle();
+
   return (
     <>
-      <Text  fz={47} fw={700} my={50} style={{ textAlign: "center" }}>
+      <Text fz={47}  fw={700} my={50} style={{ textAlign: "center" }}>
         Popular Destinations
       </Text>
-      <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }} my={50} fluid>
-        <ScrollArea w={1450} h={600} type="never">
-          <Box w={2900} h={550}>
-            <Flex gap={9}>
-              <Flex direction={"column"}>
+      <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }} my={50} fluid > 
+        <ScrollArea w="100%" h={600} type="auto" offsetScrollbars type="never">
+          <Box w="max-content" h={550}>
+            <Flex gap={10} wrap="nowrap">
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={dubai} width={354} />
                   <Text
@@ -60,7 +61,7 @@ const PopularDestinations = () => {
                 </Text>
               </Flex>
 
-              <Flex direction={"column"}>
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={abudhabi} width={354} />
                   <Text
@@ -95,8 +96,11 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
-                <Image src={sharjah} width={354} />
+
+              <Flex direction={"column"} minWidth={354}>
+                <div style={{ position: "relative" }}>
+                  <Image src={sharjah} width={354} />
+                </div>
                 <Flex justify={"space-between"}>
                   <Text c={"#0B0A12"} fw={700} fz={28}>
                     Sharjah
@@ -109,7 +113,8 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
+              
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={riyad} width={354} />
                   <Text
@@ -134,7 +139,7 @@ const PopularDestinations = () => {
                 </div>
                 <Flex justify={"space-between"}>
                   <Text c={"#0B0A12"} fw={700} fz={28}>
-                    Riyad{" "}
+                    Riyad
                   </Text>
                   <Text c={"#0B0A12"} fz={20} fw={500}>
                     4.5 <IconStarFilled color="#FDB913" size={15} />
@@ -144,7 +149,8 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
+
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={dubai} width={354} />
                   <Text
@@ -179,7 +185,8 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
+
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={abudhabi} width={354} />
                   <Text
@@ -214,8 +221,11 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
-                <Image src={sharjah} width={354} />
+
+              <Flex direction={"column"} minWidth={354}>
+                <div style={{ position: "relative" }}>
+                  <Image src={sharjah} width={354} />
+                </div>
                 <Flex justify={"space-between"}>
                   <Text c={"#0B0A12"} fw={700} fz={28}>
                     Sharjah
@@ -228,7 +238,8 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
-              <Flex direction={"column"}>
+              
+              <Flex direction={"column"} minWidth={354}>
                 <div style={{ position: "relative" }}>
                   <Image src={riyad} width={354} />
                   <Text
@@ -253,7 +264,7 @@ const PopularDestinations = () => {
                 </div>
                 <Flex justify={"space-between"}>
                   <Text c={"#0B0A12"} fw={700} fz={28}>
-                    Riyad{" "}
+                    Riyad
                   </Text>
                   <Text c={"#0B0A12"} fz={20} fw={500}>
                     4.5 <IconStarFilled color="#FDB913" size={15} />
@@ -263,6 +274,9 @@ const PopularDestinations = () => {
                   Lorem ipsum dolor sit amet
                 </Text>
               </Flex>
+
+              {/* Repeat similar structure for other destinations */}
+              
             </Flex>
           </Box>
         </ScrollArea>
@@ -270,4 +284,5 @@ const PopularDestinations = () => {
     </>
   );
 };
+
 export default PopularDestinations;

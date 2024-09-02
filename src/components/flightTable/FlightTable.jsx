@@ -16,6 +16,7 @@ import calender from "../Images/calender.png";
 import { IconArrowNarrowRight } from '@tabler/icons-react';
 import component from "../Images/component.png";
 import { DateInput } from "@mantine/dates";
+import { Form } from "@mantine/form";
 const FlightTable = () => {
   const { classes } = useStyles();
   const [rows, setRows] = useState([{ id: 1 }]);
@@ -79,7 +80,6 @@ const FlightTable = () => {
                       height={20}
                     />
                   </Flex>
-
                   <TextInput 
                     placeholder="Enter Departure Airport or City"
                     classNames={{ input: classes.input }}
