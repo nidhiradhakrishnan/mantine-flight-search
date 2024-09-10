@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
     
   },
   headerWrapper: {
-    marginTop: '29px', // Adjust header position 20px from the top
+    marginTop: '29px',
     borderRadius: '23px',
   },
   container: {
@@ -51,20 +51,7 @@ const useStyles = createStyles((theme) => ({
       cursor: 'pointer',
     },
   },
-  // card: {
-  //   width: '100%',
-  //   maxWidth: '1450px', // Default width
-  //   margin: '0 auto',
-  //   [`@media (max-width: ${theme.breakpoints.md}px)`]: {
-  //     maxWidth: '1550px',
-  //   },
-  //   [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-  //     maxWidth: '20px',
-  //   },
-  //   [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
-  //     maxWidth: '10px',
-  //   },
-  // },
+  
 }));
  
 export default useStyles;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Flex, Text, CloseButton } from "@mantine/core";
 import useStyle from "./style";
 
-const RecentSearch = () => {
+const Recent = () => {
   const { classes } = useStyle();
 
   const [recentSearches, setRecentSearches] = useState([]);
@@ -49,10 +49,7 @@ const RecentSearch = () => {
 
   return (
     <Container mx={{ lg: 100, md: 50, sm: 20, xs: 10 }} my={50} fluid>
-      <Flex
-        direction={{ base: "column", sm: "row" }}
-        gap={{ base: 20, sm: 30 }}
-      >
+      <Flex direction={{ base: "column", sm: "row" }} gap={{ base: 20, sm: 30 }}>
         <Flex>
           <Text fz={28} fw={700}>
             Recent
@@ -72,7 +69,7 @@ const RecentSearch = () => {
                     py={4}
                   >
                     <Text fz={14} color="#7B7878">
-                      {item.from}
+                       {item.from}
                     </Text>
                     <CloseButton
                       aria-label="Remove from search"
@@ -82,43 +79,6 @@ const RecentSearch = () => {
                   </Flex>
                 )}
 
-                {item.fromMulti && (
-                  <Flex
-                    bg={"#F5F5F6"}
-                    className={classes.text}
-                    align="center"
-                    px={10}
-                    py={4}
-                  >
-                    <Text fz={14} color="#7B7878">
-                      {item.fromMulti}
-                    </Text>
-                    <CloseButton
-                      aria-label="Remove from search"
-                      onClick={() => removeItem("fromMulti", index)}
-                      ml={10}
-                    />
-                  </Flex>
-                )}
-
-                {item.toMulti && (
-                  <Flex
-                    bg={"#F5F5F6"}
-                    className={classes.text}
-                    align="center"
-                    px={10}
-                    py={4}
-                  >
-                    <Text fz={14} color="#7B7878">
-                      {item.toMulti}
-                    </Text>
-                    <CloseButton
-                      aria-label="Remove from search"
-                      onClick={() => removeItem("toMulti", index)}
-                      ml={10}
-                    />
-                  </Flex>
-                )}
                 {item.to && (
                   <Flex
                     bg={"#F5F5F6"}
@@ -133,42 +93,6 @@ const RecentSearch = () => {
                     <CloseButton
                       aria-label="Remove to search"
                       onClick={() => removeItem("to", index)}
-                      ml={10}
-                    />
-                  </Flex>
-                )}
-                {item.from2 && (
-                  <Flex
-                    bg={"#F5F5F6"}
-                    className={classes.text}
-                    align="center"
-                    px={10}
-                    py={4}
-                  >
-                    <Text fz={14} color="#7B7878">
-                      {item.from2}
-                    </Text>
-                    <CloseButton
-                      aria-label="Remove from2 search"
-                      onClick={() => removeItem("from2", index)}
-                      ml={10}
-                    />
-                  </Flex>
-                )}
-                {item.to2 && (
-                  <Flex
-                    bg={"#F5F5F6"}
-                    className={classes.text}
-                    align="center"
-                    px={10}
-                    py={4}
-                  >
-                    <Text fz={14} color="#7B7878">
-                      {item.to2}
-                    </Text>
-                    <CloseButton
-                      aria-label="Remove to2 search"
-                      onClick={() => removeItem("to2", index)}
                       ml={10}
                     />
                   </Flex>
@@ -196,4 +120,4 @@ const RecentSearch = () => {
   );
 };
 
-export default RecentSearch;
+export default Recent;
